@@ -189,27 +189,3 @@
     };
     
 })(jQuery);
-
-/*
-$(".dove").toggleButton({
-    ImageWidth: 47,
-    ImageHeight: 45,
-    CssSprites: {
-        Url: "http://img840.imageshack.us/img840/962/doves.png",
-        Checked: [0, 1],
-        Unchecked: [0, 0],
-        CheckedOver: [1, 0],
-        UncheckedOver: [1, 1],
-        DisabledChecked: [2, 1],
-        DisabledUnchecked: [2, 0]
-    }
-});
-
-$("input:submit").click(function (e) {
-    e.preventDefault();
-    var c1 = $("#cbDove").is(":checked") ? "have" : "have not";
-    var c2 = $("#cbWhite").is(":checked") ? "have" : "have not";
-    var txt = "You indicated that you <b>" + c1 + "</b> a dove and you <b>" + c2 + "</b> a white dove";
-    $("#result").html(txt);
-});
-*/
