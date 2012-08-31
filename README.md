@@ -34,20 +34,25 @@ $("input:checkbox").toggleButton({
 ImageWidth: width in pixel of image for the checkbox (50 by default).
 
 ImageHeight: height in pixel of image for the checkbox (50 by default).
+```
 
-Use CssSprites or multiples images
+Use one image base with "CssSprites" or multiples images.
 
 CssSprites: use a unique image for each state of checkbox.
 
-  Url: src of unique image (null by default)  
-  Checked: position [x, y] of image for state checked. x, y can be defined with 'px', '%' or relative position in a table.  
-  Unchecked: idem Checked for state unchecked.  
-  CheckedOver: idem Checked for state checked with mouse over.  
-  UncheckedOver: idem Checked for state unchecked with mouse over.  
-  DisabledChecked: idem Checked for state checked with checkbox disable.  
-  DisabledUnchecked: idem Checked for state unchecked with checkbox disable.
-  
+```html
+  CssSprites.Url: src of unique image (null by default)  
+  CssSprites.Checked: position [x, y] of image for state checked. x, y can be defined with 'px', '%' or relative position in a table.  
+  CssSprites.Unchecked: idem Checked for state unchecked.  
+  CssSprites.CheckedOver: idem Checked for state checked with mouse over.  
+  CssSprites.UncheckedOver: idem Checked for state unchecked with mouse over.  
+  CssSprites.DisabledChecked: idem Checked for state checked with checkbox disable.  
+  CssSprites.DisabledUnchecked: idem Checked for state unchecked with checkbox disable.
+```
+
 Multiples images: use multiples images for each state of checkbox.
+
+```html
 CheckedImageUrl: null,
 UncheckedImageUrl: null,
 CheckedImageOverUrl: null,
@@ -56,6 +61,7 @@ DisabledCheckedImageUrl: null,
 DisabledUncheckedImageUrl: null,
 ImagesPreLoad: Pre load each images (true by default),
 ```
+
 For more information on how to setup a rules and customizations, [check the documentation](http://docs.jquery.com/Plugins).
 
 ## Demo
