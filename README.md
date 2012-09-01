@@ -92,11 +92,50 @@ ImagesPreLoad: Pre load each images (true by default),
 
 For more information on how to setup a rules and customizations, [check the documentation](http://docs.jquery.com/Plugins).
 
-## Demo
+## Demos
+
+### Css Sprites
+See with this Css Sprites: http://img840.imageshack.us/img840/962/doves.png.
+This image `doves.png` is composed by 6 icons in a table 3 cols x 2 rows with the same (important) size (47x45 px).
+1 for each state of checkbox (unchecked, checked, unchecked over, cheked over, unchecked disabled, checked disabled.
+To use plugin give the url of your image and give the position in the table for each state.
 
 ```html
-
+$(":checked").toggleButton({
+    ImageWidth: 47,
+    ImageHeight: 45,
+    CssSprites: {
+        Url: "http://img840.imageshack.us/img840/962/doves.png",
+        Checked: [0, 1],
+        Unchecked: [0, 0],
+        CheckedOver: [1, 1],
+        UncheckedOver: [1, 0],
+        DisabledChecked: [2, 1],
+        DisabledUnchecked: [2, 0]
+    }
+});
 ```
+
+see it in action http://jsfiddle.net/dove/mtGME/
+
+### Multiples images
+Each image is loaded separately. To avoid flickering images, they are preloaded when initializing the plugin.
+
+```html
+$(":checked").toggleButton({
+    ImageWidth: 47,
+    ImageHeight: 45,
+    CheckedImageUrl: 'http://img687.imageshack.us/img687/5514/dovechecked.png',
+    UncheckedImageUrl: 'http://img560.imageshack.us/img560/269/doveuncheckedover.png',
+    CheckedImageOverUrl: 'http://img88.imageshack.us/img88/5411/dovecheckedover.png',
+    UncheckedImageOverUrl: 'http://img16.imageshack.us/img16/5226/doveunchecked.png',
+    DisabledCheckedImageUrl: 'http://img822.imageshack.us/img822/4539/dovecheckeddisabled.png',
+    DisabledUncheckedImageUrl: 'http://img16.imageshack.us/img16/5226/doveunchecked.png',
+    ImagesPreLoad: true
+});
+```
+
+see it in action http://jsfiddle.net/dove/2mFaw/
 
 ## License
 Copyright (c) 2012 
