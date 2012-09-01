@@ -2,6 +2,7 @@
 ================================
 
 `toggleButton` is a jQuery plugin that can be attached to an HTML input checkbox control. The behavior of the checkbox is unaffected.
+The inspiration for this plugin comes from the component Ajax Control Toolkit http://www.asp.net/ajaxLibrary/AjaxControlToolkitSampleSite/ToggleButton/ToggleButton.aspx
 
 ## Getting Started
 
