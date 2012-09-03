@@ -6,9 +6,9 @@ The inspiration for this plugin comes from the component Ajax Control Toolkit ht
 
 ## Getting Started
 
-Include jQuery and the plugin on a page. Then call `toggleButton` on each checkbox of your choice.
+Include jQuery and the plugin in the page, then call `toggleButton` on each checkbox of your choice.
 
-Usage with a single image ('Css Sprites' technique):
+Usage with a single image ('Css Sprites' technique see: http://css-tricks.com/css-sprites/):
 
 ```html
 <input type="checkbox" />
@@ -31,6 +31,8 @@ $("input:checkbox").toggleButton({
 });
 </script>
 ```
+
+The arrays Checked, Unchecked, ... are the relative positions of each icon in the single reference image.
 
 Or with multiple images
 
