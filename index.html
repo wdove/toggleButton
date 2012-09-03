@@ -7,6 +7,13 @@
     <meta name="description" content="jQuery Toggle Button Plugin : ToggleButton enables the use of custom images to show the state of the CheckBox." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<style type="text/css">
+		.doveForm {
+			background-color: #EFEFEF;;
+			padding: 20px;
+			margin: 5px 0;
+		}
+	</style>
 
     <title>jQuery Toggle Button Plugin</title>
   </head>
@@ -31,6 +38,46 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+	<h3>ToggleButton Demonstration</h3>
+
+	<div class="doveForm">
+		<h2>Without jQuery Toggle Button Plugin</h2>    
+		
+		<input type="checkbox" class="cbDove" checked="checked" />
+		<label for="cbDove">I have a dove.</label>
+		
+		<input type="checkbox" class="cbWhite" checked="checked" />
+		<label for="cbPeace">I have a white dove.</label>
+		
+		<br/>
+		<br/>
+		
+		<input type="submit" value="Submit" />
+		<br/>
+		
+		<span class="result">[No response provided yet]</span>
+		<br/>
+	</div>
+
+	<div class="doveForm">
+		<h2>With jQuery Toggle Button Plugin</h2>
+		
+		<input type="checkbox" class="cbDove dove" checked="checked" />
+		<label for="cbDove">I have a dove.</label>
+		
+		<input type="checkbox" class="cbWhite dove" checked="checked" />
+		<label for="cbPeace">I have a white dove.</label>
+		
+		<br/>
+		<br/>
+		
+		<input type="submit" value="Submit" />
+		<br/>
+		
+		<span class="result">[No response provided yet]</span>
+		<br/>
+	</div>
+​
         <h3>Welcome to GitHub Pages.</h3>
 
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
@@ -68,7 +115,34 @@ $ git checkout gh-pages
       </footer>
     </div>
 
-    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="javascripts/toggleButton.1.0.1-min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".dove").toggleButton({
+				ImageWidth: 47,
+				ImageHeight: 45,
+				CssSprites: {
+					Url: "images/Doves.png",
+					Checked: [0, 1],
+					Unchecked: [0, 0],
+					CheckedOver: [1, 1],
+					UncheckedOver: [1, 0],
+					DisabledChecked: [2, 1],
+					DisabledUnchecked: [2, 0]
+				}
+			});
 
+
+			$("input:submit").click(function (e) {
+				e.preventDefault();
+				var $p =$(this).parents("div.doveForm");
+				var c1 = $p.find(".cbDove").is(":checked") ? "have" : "have not";
+				var c2 = $p.find(".cbWhite").is(":checked") ? "have" : "have not";
+				var txt = "You indicated that you <b>" + c1 + "</b> a dove and you <b>" + c2 + "</b> a white dove";
+				$p.find(".result").html(txt);
+			});
+		});
+	</script>
   </body>
 </html>
