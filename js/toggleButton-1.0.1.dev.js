@@ -62,14 +62,10 @@
         }
         
         function onClick() {
-            log('onClick');
-            
             setDecoyAction(isChecked(), false, isDisabled());
         }
         
         function onDecoyClick(e) {
-            log('onDecoyClick');
-            
             $(input)[0].click();
             e.preventDefault();
             
@@ -77,14 +73,10 @@
         }
         
         function onDecoyMouseOver() {
-            log('onDecoyMouseOver');
-            
             setDecoyAction(isChecked(), true, isDisabled());
         }
         
         /*function onDecoyMouseOut() {
-            log('onDecoyMouseOut');
-            
             // Call _onClick because it restores the correct image
             onClick();
         }*/
@@ -160,13 +152,7 @@
 		
 		function isDisabled() {
 			return $input.is(':disabled');
-		}
-        
-        function log(msg) {
-            if (options.Debug && console && console.log) {
-                console.log('%s: %o %o, %o', msg, $(input), decoyElement, options);
-			}
-        }
+		}        
     };
     
     $.fn.toggleButton = function(options) {
