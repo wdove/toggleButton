@@ -33,7 +33,7 @@ ImageHeight: 50 by default.
 The height and width of the image
 ```
 
-Use one image base with 'Css Sprites' technique see: http://css-tricks.com/css-sprites/ . Use a unique image for each state of checkbox like this
+Use one image base with 'Css Sprites' technique see: http://css-tricks.com/css-sprites/ . Use an unique image for each state of checkbox like this
 
 ![Doves.png](http://wdove.github.com/toggleButton/images/Doves.png)
 
